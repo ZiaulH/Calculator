@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>    
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <form class="calculator" name="calc">
+        <input type="text" class="value" name="txt" readonly="">
+        <span class="num clearAll" onclick="document.calc.txt.value = '' ">AC</span>
+        <span class="num clear" id="clear" onClick="backSpace()"><i class="fas fa-backspace"></i>
+        </span>
+        <span class="num rem" onclick="document.calc.txt.value += '%' ">%</span>
+        <span class="num div" onclick="document.calc.txt.value += '/' "><i class="fas fa-divide"></i>
+        </span>
+        <span class="num" onclick="document.calc.txt.value += '7' ">7</span>
+        <span class="num" onclick="document.calc.txt.value += '8' ">8</span>
+        <span class="num" onclick="document.calc.txt.value += '9' ">9</span>
+        <span class="num mul" onclick="document.calc.txt.value += '*' "><i class="fas fa-times"></i>
+        </span>
+        <span class="num" onclick="document.calc.txt.value += '4' ">4</span>
+        <span class="num" onclick="document.calc.txt.value += '5' ">5</span>
+        <span class="num" onclick="document.calc.txt.value += '6' ">6</span>
+        <span class="num sub" onclick="document.calc.txt.value += '-' ">-</span>
+        <span class="num" onclick="document.calc.txt.value += '3' ">3</span>
+        <span class="num" onclick="document.calc.txt.value += '2' ">2</span>
+        <span class="num" onclick="document.calc.txt.value += '1' ">1</span>
+        <span class="num plus" onclick="document.calc.txt.value += '+' ">+</span>
+        <span class="num" onclick="document.calc.txt.value += '0' ">0</span>
+        <span class="num" onclick="document.calc.txt.value += '.' ">.</span>
+        <span class="num equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
+    </form>
+    <script>
+    function backSpace()
+            {
+            var exp = document.calc.txt.value;
+            document.calc.txt.value = exp.substring(0, exp.length - 1); /* remove the element from total length ? 1 */
+            }
+    </script>
+</body>
+</html>
